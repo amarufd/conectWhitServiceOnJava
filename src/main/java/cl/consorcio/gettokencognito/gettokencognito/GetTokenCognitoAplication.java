@@ -11,9 +11,9 @@ public class GetTokenCognitoAplication
         System.out.println( "Conectandose al servicio login con JAVA" );
         
         EstructuraRequestCognito request = new EstructuraRequestCognito();
-        request.setUsername("");
-        request.setPassword("");
-        request.setUserPoolId("");
+        request.setUsername(Constantes.USER);
+        request.setPassword(Constantes.PASS);
+        request.setUserPoolId(Constantes.POOLID);
         
         LoginCognito login = new LoginCognito();
         

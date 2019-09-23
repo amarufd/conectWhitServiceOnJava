@@ -13,9 +13,6 @@ import com.google.gson.Gson;
 
 
 public class LoginCognito {
-	
-	private String APIKEY = "";
-	private String URL = "";
 
 	public EstructuraResponseCognito getTokenCognito(int timeout, EstructuraRequestCognito request) {
 		System.out.println("Start [getFactorEjecutivoHogar]");
@@ -23,13 +20,13 @@ public class LoginCognito {
 		EstructuraResponseCognito response = new EstructuraResponseCognito();
 
 		try {
-			URL url = new URL(URL);
+			URL url = new URL(Constantes.URL);
 			HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
 			conn.setDoOutput(true);
 			conn.setDoInput(true);
 			conn.setRequestMethod("POST");
 			conn.setRequestProperty("Accept", "application/json");
-			conn.setRequestProperty("x-api-key",APIKEY);
+			conn.setRequestProperty("x-api-key",Constantes.APIKEY);
 			
 			System.out.println("Url conneccion getFactorEjecutivoHogar: "+url);
 
